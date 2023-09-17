@@ -7,8 +7,9 @@
     margin: 0px;
 }
 
+
 body {
-    background: #f5f5f5;
+    //background: #f5f5f5;
     display: flex;
     flex-direction: column;    
     overflow-y: scroll;
@@ -16,11 +17,16 @@ body {
     padding: 0;
     margin: 0px;
     min-height: 100vh;
-    color: rgb(203 212 225 / var(--tw-text-opacity));
 }
 
 .active {
     color: rgb(255, 174, 0);
+}
+
+.HomePage {
+    display: flex;
+    justify-content: center;
+    color: rgb(203 212 225);
 }
 
 .News {
@@ -82,3 +88,70 @@ body {
         font-size: small;
     }
 }
+
+.dark .ToDo {
+    background-color:rgb(16, 26, 42);
+}
+.ToDo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 390px;
+    min-height: 300px;
+    background-color: rgb(93, 112, 142);
+    h2 {
+        width: 70%;
+        height: 65px;
+        text-align: center;
+        font-size: 60px;
+        margin-top:-10px;
+        
+    }
+    .Rows {
+        width: 350px;
+        min-height: 250px;
+        margin: 20px;
+        div, p {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(167, 180, 215);
+            border: solid 1px rgb(109, 124, 167);
+            padding: 5px;
+            font-size: 25px;
+            color:  rgb(61, 71, 101);;
+            h6, button {
+                display: inline-block;
+                font-size: 10px;
+                padding: 2px 4px;
+                margin: 5px;
+                &:focus {
+                    border: solid 1px rgb(112, 112, 144);
+                    border-radius: 0.2rem;
+                }
+            }
+            img{
+                display: inline-block;
+                width: 35px;
+                font-size: 10px;
+                padding-bottom: 5px;
+                margin-right: 10px;
+            }
+        } 
+        input {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            &:focus {
+                outline: 0;
+            }  
+        }     
+        div:last-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    
+}
+

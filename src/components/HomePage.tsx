@@ -1,7 +1,9 @@
+import ToDo from "./ToDo";
+
 function HomePage() {
     return(
-        <div>
-            Home
+        <div className="HomePage">
+            <ToDo/>
         </div>
     )
 }

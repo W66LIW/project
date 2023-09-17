@@ -1,6 +1,6 @@
 import { newsApi, useGetAllNewsQuery } from "../services/newsService";
 import OneNews from "./OneNews";
-import { INews } from "../types/INews";
+import { INews } from "../types";
 
 function News() {
 

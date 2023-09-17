@@ -1,10 +1,16 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import authorizationData from "./loginSlice";
+import toDoInput from "./todoInputSlice";
+import allToDos from "./allToDosSlice";
+import show from "./showSlice";
 import { newsApi } from "../services/newsService";
 
 
 const rootReduser = combineReducers({
     authorizationData,
+    toDoInput,
+    allToDos,
+    show,
     [newsApi.reducerPath]: newsApi.reducer
 });
 

@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { INews } from '../types/INews';
+import { INews } from '../types';
 
 export const newsApi = createApi({
     reducerPath: "newsApi",

@@ -1,7 +1,6 @@
 import {Link, Outlet} from "react-router-dom";
 import theme from '../theme';
 import Header from "./Header";
-import Div from "./Div";
 import Theme from "./Theme";
 
 function Layout() {

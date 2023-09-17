@@ -1,3 +1,9 @@
+export interface ITodo {
+    name: string,
+    id: string,
+    completed: boolean
+}
+
 export interface INews {
     author: string;
     id: number;

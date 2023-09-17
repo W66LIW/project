@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { INews } from "../types/INews";
+import { INews } from "../types";
 
 interface OneNewsProps {
     news: INews
