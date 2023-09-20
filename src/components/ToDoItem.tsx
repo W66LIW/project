@@ -8,9 +8,9 @@ function ToDoItem({task}: { task: ITodo }) {
     const dispatch = useAppDispatch();
     let imgSrc = task.completed ? done : inProgress;
     let textDecoration = task.completed ? "line-through" : "none";
-    let opacity = task.completed ? "0.3" : "1";
+    let opacity = task.completed ? "0.4" : "1";
     return(
-    <p key={task.id}>
+    <p key={task.id} className="Row">
         <img src={imgSrc} alt="completed" onDoubleClick={() => dispatch(changeCompleted(task.id))}/> 
         <span style={{textDecoration: textDecoration, opacity: opacity}}>{task.name}</span>
         </p>

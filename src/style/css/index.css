@@ -26,6 +26,26 @@ body {
   color: rgb(255, 174, 0);
 }
 
+.Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  background-color: rgb(100, 116, 139);
+  color: rgb(255, 255, 255);
+  border-bottom: solid 1px rgba(135, 127, 127, 0.08);
+}
+
+.dark .Header {
+  background-color: rgb(15, 23, 42);
+  color: rgb(203, 213, 225);
+}
+
 .HomePage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,6 +53,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 110px 50px 20px 50px;
   color: rgb(203, 212, 225);
 }
 
@@ -51,6 +72,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 60px 30px 30px 30px;
 }
 .News div {
   display: -webkit-box;
@@ -82,6 +104,9 @@ body {
   display: none;
 }
 
+.Profile {
+  padding: 90px 10px 20px 0px;
+}
 .Profile a {
   color: cornflowerblue;
 }
@@ -129,7 +154,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 390px;
-  min-height: 300px;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  border-radius: 25px;
+  padding: 10px 30px;
   background-color: rgb(93, 112, 142);
 }
 .ToDo h2 {
@@ -140,30 +169,39 @@ body {
   margin-top: -10px;
 }
 .ToDo .Rows {
-  width: 350px;
-  min-height: 250px;
+  width: 100%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   margin: 20px;
 }
-.ToDo .Rows div, .ToDo .Rows p {
+.ToDo .Rows .Scroll {
+  overflow-y: scroll;
+  max-height: 300px;
+}
+.ToDo .Rows .Scroll::-webkit-scrollbar {
+  display: none;
+}
+.ToDo .Rows .Row {
   width: 100%;
   height: 50px;
-  background-color: rgb(167, 180, 215);
+  background-color: rgb(189, 198, 225);
   border: solid 1px rgb(109, 124, 167);
   padding: 5px;
   font-size: 25px;
-  color: rgb(61, 71, 101);
+  color: rgb(36, 43, 62);
 }
-.ToDo .Rows div h6, .ToDo .Rows div button, .ToDo .Rows p h6, .ToDo .Rows p button {
+.ToDo .Rows .Row h6, .ToDo .Rows .Row button {
   display: inline-block;
   font-size: 10px;
   padding: 2px 4px;
   margin: 5px;
 }
-.ToDo .Rows div h6:focus, .ToDo .Rows div button:focus, .ToDo .Rows p h6:focus, .ToDo .Rows p button:focus {
+.ToDo .Rows .Row h6:focus, .ToDo .Rows .Row button:focus {
   border: solid 1px rgb(112, 112, 144);
   border-radius: 0.2rem;
 }
-.ToDo .Rows div img, .ToDo .Rows p img {
+.ToDo .Rows .Row img {
   display: inline-block;
   width: 35px;
   font-size: 10px;

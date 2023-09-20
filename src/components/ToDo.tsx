@@ -17,18 +17,21 @@ function ToDo() {
         <div className="ToDo">
             <h2>todos</h2>
             <div className="Rows">
-                <div>
+                <div className="Row">
                     <input type="text" id="task"
                     value={input}
                     onChange={(e) => dispatch(changeToDoInput(e.target.value))}
                     onKeyDown={handleKeyDown}/>
                 </div>
-                        {show === "active" ? 
-                        arrOfTodos.map((task) => task.completed ? null : <ToDoItem task={task}/>) : 
-                        show === "completed" ?
-                        arrOfTodos.map((task) => task.completed ? <ToDoItem task={task}/> : null) : 
-                        arrOfTodos.map((task) => <ToDoItem task={task}/>)}
-                    <div >
+                <div className="Scroll" 
+                onScroll={(e) => e.stopPropagation()}>
+                    {show === "active" ? 
+                    arrOfTodos.map((task) => task.completed ? null : <ToDoItem task={task}/>) : 
+                    show === "completed" ?
+                    arrOfTodos.map((task) => task.completed ? <ToDoItem task={task}/> : null) : 
+                    arrOfTodos.map((task) => <ToDoItem task={task}/>)}
+                </div>
+                    <div className="Row">
                         <h6>{activeTasks} items left</h6>
                         <button onClick={() => dispatch(change("all"))}>All</button>
                         <button onClick={() => dispatch(change("active"))}>Active</button>

@@ -23,9 +23,26 @@ body {
     color: rgb(255, 174, 0);
 }
 
+.Header {
+    display: flex; 
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 64px;
+    background-color: rgb(100 116 139);
+    color: rgb(255 255 255);
+    border-bottom: solid 1px rgba(135, 127, 127, 0.08);
+}
+
+.dark .Header {
+    background-color: rgb(15 23 42);
+    color: rgb(203 213 225);
+}
+
 .HomePage {
     display: flex;
     justify-content: center;
+    padding: 110px 50px 20px 50px;
     color: rgb(203 212 225);
 }
 
@@ -35,6 +52,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 60px 30px 30px 30px;
     div {
         display: flex;
         flex-direction: column;
@@ -62,6 +80,7 @@ body {
 }
 
 .Profile {
+    padding: 90px 10px 20px 0px;
     a {
         color: cornflowerblue;
     }
@@ -97,28 +116,36 @@ body {
     flex-direction: column;
     align-items: center;
     width: 390px;
-    min-height: 300px;
-    background-color: rgb(93, 112, 142);
+    min-height: fit-content;
+    border-radius: 25px;
+    padding: 10px 30px;
+    background-color: rgb(93, 112, 142); 
     h2 {
         width: 70%;
         height: 65px;
         text-align: center;
         font-size: 60px;
-        margin-top:-10px;
-        
+        margin-top:-10px;       
     }
     .Rows {
-        width: 350px;
-        min-height: 250px;
+        width: 100%;
+        min-height: fit-content;
         margin: 20px;
-        div, p {
+        .Scroll {
+            overflow-y: scroll;
+            max-height: 300px;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        .Row {
             width: 100%;
             height: 50px;
-            background-color: rgb(167, 180, 215);
+            background-color: rgb(189, 198, 225);
             border: solid 1px rgb(109, 124, 167);
             padding: 5px;
             font-size: 25px;
-            color:  rgb(61, 71, 101);;
+            color:  rgb(36, 43, 62);
             h6, button {
                 display: inline-block;
                 font-size: 10px;
