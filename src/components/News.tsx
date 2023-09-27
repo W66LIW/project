@@ -1,4 +1,4 @@
-import { newsApi, useGetAllNewsQuery } from "../services/newsService";
+import { useGetAllNewsQuery } from "../services/newsService";
 import OneNews from "./OneNews";
 import { INews } from "../types";
 

@@ -12,7 +12,6 @@ function ToDo() {
     const activeTasks = useTypedSelector((state) => state.allToDos.countOfActiveTasks)
     const show = useTypedSelector((state) => state.show);
     
-    console.log(arrOfTodos)
     return (
         <div className="ToDo">
             <h2>todos</h2>

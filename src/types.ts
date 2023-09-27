@@ -16,3 +16,7 @@ export interface INews {
     title: string;
     url: string
 }
+
+export interface IBooksProps {
+    value: string
+}

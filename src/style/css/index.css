@@ -21,6 +21,13 @@ body {
   margin: 0px;
   min-height: 100vh;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.dark body {
+  color: rgb(203, 212, 225);
+}
 
 .active {
   color: rgb(255, 174, 0);
@@ -226,4 +233,90 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.Books {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 90px 10px 30px 10px;
+  color: black;
+}
+.Books .Items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+}
+.Books .Items div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 300px;
+  margin: 15px;
+}
+.Books .Items div img {
+  width: 150px;
+}
+.Books .Items div p {
+  font-size: small;
+  width: 150px;
+  min-height: 40px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.dark .Books {
+  color: rgb(203, 212, 225);
+}
+
+.SearchBook {
+  width: 80%;
+  height: 200px;
+}
+.SearchBook div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  width: 40%;
+}
+.SearchBook div input {
+  width: 93%;
+  height: 30px;
+  padding: 7px 7px 10px 7px;
+  color: black;
+  font-size: larger;
+  outline: none;
+}
+.SearchBook div button {
+  width: 7%;
+  height: 100%;
+  background-image: "magnifier.png";
 }

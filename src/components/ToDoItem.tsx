@@ -1,5 +1,5 @@
 import { ITodo } from '../types';
-import done from '../svg/done.svg';
+import done from '../svg/done.svg' ;
 import inProgress from '../svg/inProgress.png';
 import { useAppDispatch } from '../redux/hooks';
 import { changeCompleted } from '../redux/allToDosSlice';
