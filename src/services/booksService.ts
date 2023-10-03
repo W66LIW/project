@@ -5,7 +5,7 @@ export const booksApi = createApi({
     baseQuery: fetchBaseQuery({baseUrl: "https://www.googleapis.com/books/v1"}),
     endpoints: (builder) => ({
         getBooks: builder.query({
-          query: (searchTerm) => `/volumes?q=${searchTerm}&key=AIzaSyAvEaW_gHWUaU0xn1UQwD-PpFt9ABC3BJ8&maxResults=40&keyAIzaSyAvEaW_gHWUaU0xn1UQwD-PpFt9ABC3BJ8`,
+          query: ({searchTerm, startIndex, sorting, subject}) => `/volumes?q=${searchTerm}${subject === "all" ? "" : `+subject:${subject}`}&startIndex=${startIndex}&orderBy=${sorting}&printType=books&maxResults=30&key=AIzaSyBxoSZzSSe6XIMiSF4fOfHUU1ebKAiPUOM`,
         }),
     })
 })

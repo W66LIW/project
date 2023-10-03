@@ -17,6 +17,8 @@ export interface INews {
     url: string
 }
 
-export interface IBooksProps {
-    value: string
+export interface IInitialState {
+    books: any[],
+    arrOfId: string[]
 }
+

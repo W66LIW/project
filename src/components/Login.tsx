@@ -16,8 +16,8 @@ function Login() {
         } else setError(true) 
     }
     return(
-        <div className="flex flex-col items-center justify-center mt-16 " >
-            <div className="flex flex-col items-center h-fit w-54 bg-slate-500 rounded-2xl p-4">
+        <div className="flex flex-col items-center justify-center mt-16 dark:text-zinc-950" >
+            <div className="flex flex-col items-center h-fit w-54 my-20 bg-slate-500 rounded-2xl p-4">
                 <span className="mx-2 my-2 text-slate-200 w-36 text-center">Введите логин и пароль</span>
                     <input className="mx-2 my-2 px-2 w-32 rounded-md bg-slate-200"
                         type="text"
