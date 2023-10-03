@@ -410,17 +410,68 @@ body::-webkit-scrollbar {
   -webkit-transform: scale(0);
           transform: scale(0);
 }
-.Modal div {
+.Modal .Main {
   position: relative;
   top: -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 70%;
   min-width: 50%;
   height: 60%;
-  background-color: rgb(16, 26, 42);
-  padding: 20px;
+  padding: 20px 30px;
+  color: rgb(16, 26, 42);
+  background-color: rgb(127, 143, 165);
+}
+.Modal .Main img {
+  height: 80%;
+  max-width: 30%;
+}
+.Modal .Main .Content {
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+.Modal .Main .Content h6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  font-size: larger;
+  padding: 5px 30px;
+}
+.Modal .Main .Content p {
+  font-size: small;
+}
+.Modal .Main .Content .Description {
+  height: 100%;
+  margin: 10px;
+  overflow-y: scroll;
+}
+.Modal .Main .Content .Description::-webkit-scrollbar {
+  display: none;
 }
 
 .active {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.dark .Modal .Main {
+  background-color: rgb(16, 26, 42);
+  color: beige;
+  -webkit-box-shadow: 0px 0px 90px rgba(189, 194, 202, 0.16);
+          box-shadow: 0px 0px 90px rgba(189, 194, 202, 0.16);
 }

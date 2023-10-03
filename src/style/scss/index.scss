@@ -327,18 +327,59 @@ body {
     height: 100%;
     margin-top: -30px;
     background-color: rgba(13, 22, 31, 0.678);
-    div {
+    .Main {
         position: relative;
         top: -50px;
+        display: flex;
+        align-items: center;
         max-width: 70%;
         min-width: 50%;
         height: 60%;
-        background-color: rgb(16, 26, 42);
-        padding: 20px;
+        padding: 20px 30px;
+        color: rgb(16, 26, 42);
+        background-color: rgb(127, 143, 165);
+
+        img {
+            height: 80%;
+            max-width: 30%;
+        }
+
+        .Content {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            h6 {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                font-size: larger;
+                padding: 5px 30px;
+            }
+            p {
+                font-size: small;
+            }
+            .Description {
+                height: 100%;
+                margin: 10px;
+                overflow-y: scroll;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+        }
     }
     transform: scale(0);
 }
 
 .active {
     transform: scale(1);
+}
+
+.dark .Modal {
+    .Main {
+        background-color: rgb(16, 26, 42);
+        color: beige;
+        box-shadow: 0px 0px 90px rgba(189, 194, 202, 0.16);
+    }
 }

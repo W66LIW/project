@@ -1,10 +1,25 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { IModALInitialState } from "../types";
+
+const initialState = {
+   isActive: false,
+   book: null
+} as IModALInitialState;
 
  const booksModalSlice = createSlice({
     name: "booksModal",
-    initialState: false,
+    initialState: initialState,
     reducers: {
-      toggle: (state: boolean) => !state,
+      toggle: (state: IModALInitialState, {payload}: PayloadAction <any>) => {
+         if(state.isActive === false) {
+            return {
+               isActive: true,
+               book: payload
+            }
+         } else {
+            return initialState
+         };
+      },
     }
  })
 

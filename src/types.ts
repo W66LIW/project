@@ -22,3 +22,8 @@ export interface IInitialState {
     arrOfId: string[]
 }
 
+export interface IModALInitialState {
+    isActive: boolean,
+    book: any
+}
+

@@ -1,7 +1,9 @@
-import { useTypedSelector } from "../../redux/hooks";
+import { toggle } from "../../redux/booksModalSlice";
+import { useAppDispatch, useTypedSelector } from "../../redux/hooks";
 import Modal from "./Modal";
 
 function FoundBooks() {
+    const dispatch = useAppDispatch();
     const foundBooks = useTypedSelector(state => state.foundBooks.books);
     return(
         <div className="Items">
@@ -18,7 +20,7 @@ function FoundBooks() {
         </div> 
     )
     function handleBookClik(item: any) {
-        return ""
+        dispatch(toggle(item))
     }
 }
 
